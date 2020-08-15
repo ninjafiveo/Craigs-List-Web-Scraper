@@ -15,10 +15,12 @@ namespace CraigsListWebScraper
         static ScrapingBrowser _scrapingBrowser = new ScrapingBrowser();
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter the Craigs List Hyperlink You Would Like to Search. Should looke like https://... ");
+            var searchAddress = Console.ReadLine();
             Console.WriteLine("Please Enter A Search Term: ");
             var searchTerm = Console.ReadLine();
 
-            var mainLinks = GetMainPageLinks("https://youngstown.craigslist.org/d/computer-gigs/search/cpg");
+            var mainLinks = GetMainPageLinks(searchAddress);
             var lstPageDetails = GetPageDetails(mainLinks, searchTerm);
             exportGigsToCSV(lstPageDetails, searchTerm);
         }
