@@ -16,6 +16,7 @@ namespace CraigsListWebScraper
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter the Craigs List Hyperlink You Would Like to Search. Should looke like https://... ");
+            // Web address should look like: https://youngstown.craigslist.org/d/all-housing-wanted/search/hsw
             var searchAddress = Console.ReadLine();
             Console.WriteLine("Please Enter A Search Term: ");
             var searchTerm = Console.ReadLine();
